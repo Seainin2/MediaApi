@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "13a63efd-5c00-424c-bb1e-5b026ef3b46d": {
+      "ProjectGuid": "13a63efd-5c00-424c-bb1e-5b026ef3b46d",
+      "DisplayName": "MediaApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

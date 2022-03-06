@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,12 +8,14 @@ namespace MediaApi.Models
 {
     public class CreatingProperty
     {
-        Guid Id { get; set; }
-        String Name { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        [Required]
+        public String Name { get; set; }
 
-        String Description { get; set; }
+        public String Description { get; set; }
 
-        List<Media> media { get; set; }
+        public List<Media> Media { get; set; }
 
     }
 }

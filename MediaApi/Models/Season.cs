@@ -1,29 +1,33 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
+using System.ComponentModel.DataAnnotations;
 namespace MediaApi.Models
 {
     public class Season : Media
     {
-        List<String> Director { get; set; }
+        public List<Person> Director { get; set; }
 
-        List<Episode> Episode { get; set; }
+        public List<Episode> Episode { get; set; }
 
-        List<String> Actor { get; set; }
+        public List<Person> Actor { get; set; }
 
-        List<String> OtherPerson { get; set; }
+        public List<Person> OtherPerson { get; set; }
+
     }
 
-    public class Episode { 
-        
-        int NumberOfEpisode { get; set; }
-        String Title { get; set; }
+    public class Episode
+    {
 
-        String Description { get; set; }
+        [Key]
+        public Guid Id { get; set; }
 
-        String Length { get; set; }
+        [Required]
+        public int NumberOfEpisode { get; set; }
+        public String Title { get; set; }
+
+        public String Description { get; set; }
+
+        public String Length { get; set; }
 
     }
 }

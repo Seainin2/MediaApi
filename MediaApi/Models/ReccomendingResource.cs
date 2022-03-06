@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -7,8 +8,12 @@ namespace MediaApi.Models
 {
     public class ReccomendingResource
     {
-        String Name { get; set; }
 
-        String Rating { get; set; }
+        [Key]
+        public Guid Id { get; set; }
+        [Required]
+        public String Name { get; set; }
+        [Required]
+        public String Rating { get; set; }
     }
 }

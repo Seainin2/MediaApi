@@ -1,6 +1,8 @@
+using MediaApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,10 +29,10 @@ namespace MediaApi
         {
 
             services.AddControllers();
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "MediaApi", Version = "v1" });
-            });
+
+            services.AddDbContext<AllContext>(op => op.UseSqlServer(Configuration.GetConnectionString("AzureDbConnectionString")));
+
+            //services.AddScoped<IAllData, SqlAllData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
