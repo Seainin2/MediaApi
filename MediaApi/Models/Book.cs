@@ -6,14 +6,27 @@ using System.Threading.Tasks;
 
 namespace MediaApi.Models
 {
-    public class Book : Media
+    public class Book
     {
+        [Key]
+        public Guid MediaId { get; set; }
+
+        public Guid SeriesId { get; set; }
+
+        public Guid CreatingPropertyId { get; set; }
+
         [Required]
-        public List<Person> Author { get; set; }
+        public String Title { get; set; }
 
-        public String Length { get; set; }
+        [Required]
+        public String ReleaseDate { get; set; }
 
-        public List<Person> OtherPerson { get; set; }
+        public String Description { get; set; }
+
+        public int NumberofTimesSearched { get; set; }
+
+        public int Length { get; set; }
+
 
     }
 }

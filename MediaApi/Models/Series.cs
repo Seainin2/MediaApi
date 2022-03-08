@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -9,13 +10,15 @@ namespace MediaApi.Models
     public class Series
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid SeriesId { get; set; }
         [Required]
         public String Name { get; set; }
         [Required]
         public Boolean Finished { get; set; }
 
-        public List<Media> Media { get; set; }
+        [NotMapped]
+
+        public List<Object> Media { get; set; }
 
     }
 

@@ -7,13 +7,24 @@ using System.Threading.Tasks;
 
 namespace MediaApi.Models
 {
-    public class Game : Media
+    public class Game
     {
-        [Required]
-        public String Studio { get; set; }
-        public List<MultiplayerOption> MultiplayerOption { get; set; }
+        [Key]
+        public Guid MediaId { get; set; }
 
-        public List<Platform> Platform { get; set; }
+        public Guid SeriesId { get; set; }
+
+        public Guid CreatingPropertyId { get; set; }
+
+        [Required]
+        public String Title { get; set; }
+
+        [Required]
+        public String ReleaseDate { get; set; }
+
+        public String Description { get; set; }
+
+        public int NumberofTimesSearched { get; set; }
 
     }
 
@@ -21,7 +32,9 @@ namespace MediaApi.Models
     {
 
         [Key]
-        public Guid Id { get; set; }
+        public Guid MultiplayerOptionId { get; set; }
+
+        public Guid GameId { get; set; }
 
         [Required]
         public String MultiplayerOptionType { get; set; }
@@ -32,7 +45,9 @@ namespace MediaApi.Models
     {
 
         [Key]
-        public Guid Id { get; set; }
+        public Guid PlatformId { get; set; }
+
+        public Guid GameId { get; set; }
 
         [Required]
         public String PlatformName { get; set; }

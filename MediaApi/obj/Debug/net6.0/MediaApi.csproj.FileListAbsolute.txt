@@ -75,3 +75,4 @@ C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi
 C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\ref\MediaApi.dll
 C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi.pdb
 C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi.genruntimeconfig.cache
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi.csproj.AssemblyReference.cache

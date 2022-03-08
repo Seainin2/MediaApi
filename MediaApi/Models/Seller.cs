@@ -9,7 +9,9 @@ namespace MediaApi.Models
     public class Seller
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid SellerId { get; set; }
+
+        public Guid MediaId { get; set; }
 
         [Required]
         public String Name { get; set; }

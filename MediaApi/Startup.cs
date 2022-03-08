@@ -1,3 +1,4 @@
+using MediaApi.Data;
 using MediaApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,7 +33,13 @@ namespace MediaApi
 
             services.AddDbContext<AllContext>(op => op.UseSqlServer(Configuration.GetConnectionString("AzureDbConnectionString")));
 
-            //services.AddScoped<IAllData, SqlAllData>();
+            services.AddScoped<IMovieData, SqlMovieData>();
+            services.AddScoped<IBookData, SqlBookData>();
+            services.AddScoped<IGameData, SqlGameData>();
+            services.AddScoped<IEpisodeData, SqlEpisodeData>();
+            services.AddScoped<ISeasonData, SqlSeasonData>();
+            services.AddScoped<ISeriesData, SqlSeriesData>();
+            //services.AddScoped<IAllData, MockMovieData>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -41,9 +48,9 @@ namespace MediaApi
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "MediaApi v1"));
             }
+
+            app.UseHttpsRedirection();
 
             app.UseRouting();
 

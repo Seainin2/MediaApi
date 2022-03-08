@@ -9,13 +9,11 @@ namespace MediaApi.Models
     public class CreatingProperty
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid CreatingPropertyId { get; set; }
         [Required]
         public String Name { get; set; }
 
         public String Description { get; set; }
-
-        public List<Media> Media { get; set; }
 
     }
 }

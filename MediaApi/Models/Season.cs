@@ -1,17 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+
 namespace MediaApi.Models
 {
-    public class Season : Media
+    public class Season
     {
-        public List<Person> Director { get; set; }
+        [Key]
+        public Guid MediaId { get; set; }
 
-        public List<Episode> Episode { get; set; }
+        public Guid SeriesId { get; set; }
 
-        public List<Person> Actor { get; set; }
+        public Guid CreatingPropertyId { get; set; }
 
-        public List<Person> OtherPerson { get; set; }
+        [Required]
+        public String Title { get; set; }
+
+        [Required]
+        public String ReleaseDate { get; set; }
+
+        public String Description { get; set; }
+
+        public int NumberofTimesSearched { get; set; }
+
+        [NotMapped]
+
+        public List<Episode> Episodes { get; set; }
 
     }
 
@@ -19,15 +34,17 @@ namespace MediaApi.Models
     {
 
         [Key]
-        public Guid Id { get; set; }
+        public Guid EpisodeId { get; set; }
 
         [Required]
-        public int NumberOfEpisode { get; set; }
+
+        public Guid SeasonId { get; set; }
+
         public String Title { get; set; }
 
         public String Description { get; set; }
 
-        public String Length { get; set; }
+        public int Length { get; set; }
 
     }
 }

@@ -7,12 +7,11 @@ namespace MediaApi.Models
     public class Person
     {
         [Key]
-        public Guid Id { get; set; }
+        public Guid PersonId { get; set; }
 
         public string Name { get; set; }
 
-        public DateTime DOB { get; set; }
+        public String DOB { get; set; }
 
-        public List<Media> Media { get; set; }
     }
 }

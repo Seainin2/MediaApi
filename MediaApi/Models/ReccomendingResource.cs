@@ -10,7 +10,10 @@ namespace MediaApi.Models
     {
 
         [Key]
-        public Guid Id { get; set; }
+        public Guid RatingId { get; set; }
+
+        public Guid MediaId { get; set; }
+
         [Required]
         public String Name { get; set; }
         [Required]
