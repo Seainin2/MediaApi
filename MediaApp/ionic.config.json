@@ -1,0 +1,7 @@
+{
+  "name": "MediaApp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

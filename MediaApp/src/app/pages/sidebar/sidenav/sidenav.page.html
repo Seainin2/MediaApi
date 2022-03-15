@@ -1,0 +1,26 @@
+<ion-app>
+  <ion-menu contentId="content" side="start">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Side Bar Nav</ion-title>
+        <h3>{{active}}</h3>
+        {{[routerLink]}}
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-menu-toggle auto-hide="false" *ngFor="let nav of NAV" >
+
+          <ion-item [routerLink]="nav.link" routerDirection="forward" [class.active-item]="active === nav.link">
+            {{nav.name}}
+            {{nav.link}}
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="content" main></ion-router-outlet>
+
+</ion-app>
