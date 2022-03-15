@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "8TgGlBsnCpf0zMSM38V20XJJtiuZMxy5d5xzxLAUE0Y=",
+  "Hash": "EzHhEK2oUjAElNQ5gc3HiQdzekFYFrAcp8catcI+xgs=",
   "Source": "MediaApi",
   "BasePath": "_content/MediaApi",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "MediaApi\\wwwroot",
+      "Source": "MediaApi",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\wwwroot\\",
+      "BasePath": "_content/MediaApi",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\wwwroot\\Upload\\ManualSave_7f757_7e612400_69edc4.png",
+      "SourceId": "MediaApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\wwwroot\\",
+      "BasePath": "_content/MediaApi",
+      "RelativePath": "Upload/ManualSave_7f757_7e612400_69edc4.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Upload\\ManualSave_7f757_7e612400_69edc4.png"
+    }
+  ]
 }

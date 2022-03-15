@@ -2,6 +2,7 @@
 using MediaApi.Models;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using static MediaApi.Controllers.ImageUploadController;
 
 namespace MediaApi.Controllers
 {
@@ -42,7 +43,7 @@ namespace MediaApi.Controllers
         [HttpPost]
         [Route("api/[controller]")]
 
-        public IActionResult AddMovie(Movie movie)
+        public IActionResult AddMovie(Movie movie, [FromForm] FileUploadAPI objFile)
         {
 
             return Ok(_movieData.AddMovie(movie));

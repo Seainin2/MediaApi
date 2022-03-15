@@ -76,3 +76,10 @@ C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\ref\Medi
 C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi.pdb
 C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi.genruntimeconfig.cache
 C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\obj\Debug\net6.0\MediaApi.csproj.AssemblyReference.cache
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\System.Web.Cors.dll
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\System.Net.Http.Formatting.dll
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\System.Web.Http.dll
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\System.Web.Http.Cors.dll
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll
+C:\Users\Seainin Keenan\source\repos\MediaApi\MediaApi\bin\Debug\net6.0\MediaApi.staticwebassets.runtime.json

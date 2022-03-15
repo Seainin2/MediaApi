@@ -2,6 +2,7 @@ using MediaApi.Data;
 using MediaApi.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -39,6 +40,13 @@ namespace MediaApi
             services.AddScoped<IEpisodeData, SqlEpisodeData>();
             services.AddScoped<ISeasonData, SqlSeasonData>();
             services.AddScoped<ISeriesData, SqlSeriesData>();
+            services.AddCors(option => {
+                option.AddDefaultPolicy(builder =>
+                {
+                    builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
             //services.AddScoped<IAllData, MockMovieData>();
         }
 
@@ -49,16 +57,29 @@ namespace MediaApi
             {
                 app.UseDeveloperExceptionPage();
             }
+            else 
+            {
+                app.UseHsts();
+            }
 
             app.UseHttpsRedirection();
 
             app.UseRouting();
 
+            app.UseCors();
+
             app.UseAuthorization();
+
+            app.UseStaticFiles();
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+
+            app.Run(async (context) =>
+            {
+                await context.Response.WriteAsync("Could Not Find Anything");
             });
         }
     }
