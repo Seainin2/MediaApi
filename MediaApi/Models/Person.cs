@@ -11,6 +11,8 @@ namespace MediaApi.Models
 
         public string Name { get; set; }
 
+        public String ImageName { get; set; }
+
         public String DOB { get; set; }
 
     }

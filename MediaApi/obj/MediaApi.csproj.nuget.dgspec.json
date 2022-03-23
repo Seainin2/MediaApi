@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\MediaApi.csproj": {}
+    "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\MediaApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\MediaApi.csproj": {
+    "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\MediaApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\MediaApi.csproj",
+        "projectUniqueName": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\MediaApi.csproj",
         "projectName": "MediaApi",
-        "projectPath": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\MediaApi.csproj",
+        "projectPath": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\MediaApi.csproj",
         "packagesPath": "C:\\Users\\Seainin Keenan\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\obj\\",
+        "outputPath": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Seainin Keenan\\AppData\\Roaming\\NuGet\\NuGet.Config",

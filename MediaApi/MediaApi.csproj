@@ -21,7 +21,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\Book\" />
+    <Folder Include="wwwroot\CreatingProperty\" />
+    <Folder Include="wwwroot\Game\" />
+    <Folder Include="wwwroot\Movie\" />
+    <Folder Include="wwwroot\Series\" />
+    <Folder Include="wwwroot\Seller\" />
+    <Folder Include="wwwroot\Season\" />
+    <Folder Include="wwwroot\ReccomendingResource\" />
+    <Folder Include="wwwroot\Person\" />
   </ItemGroup>
 
 </Project>

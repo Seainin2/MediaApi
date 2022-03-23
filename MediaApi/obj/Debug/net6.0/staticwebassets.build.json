@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EzHhEK2oUjAElNQ5gc3HiQdzekFYFrAcp8catcI+xgs=",
+  "Hash": "j5i0lsB4nlkMTAFc39/9SIoi+7dI3oncxtfs6oWQMQA=",
   "Source": "MediaApi",
   "BasePath": "_content/MediaApi",
   "Mode": "Default",
@@ -10,17 +10,34 @@
     {
       "Name": "MediaApi\\wwwroot",
       "Source": "MediaApi",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\wwwroot\\Upload\\ManualSave_7f757_7e612400_69edc4.png",
+      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\words of radiance.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\source\\repos\\MediaApi\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "BasePath": "_content/MediaApi",
+      "RelativePath": "Movie/words of radiance.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Movie\\words of radiance.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Upload\\ManualSave_7f757_7e612400_69edc4.png",
+      "SourceId": "MediaApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Upload/ManualSave_7f757_7e612400_69edc4.png",
       "AssetKind": "All",

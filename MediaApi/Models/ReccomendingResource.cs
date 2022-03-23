@@ -16,6 +16,8 @@ namespace MediaApi.Models
 
         [Required]
         public String Name { get; set; }
+
+        public String ImageName { get; set; }
         [Required]
         public String Rating { get; set; }
     }

@@ -25,7 +25,7 @@ export class LoginPage implements OnInit {
       if(res.user.uid){
         this.fireService.getDetails({uid:res.user.uid}).subscribe(res=>{
           console.log(res);
-          this.router.navigate(['/sidebar/sidenav'])
+          this.router.navigate(['/sidenav/nav/calender'])
           //alert('Welcome '+res['name']);
         },err=>{
           console.log(err);

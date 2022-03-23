@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MediaApi.Controllers
 {
-    [Route("api/[controller]/{id}")]
+
     [ApiController]
     public class ImageUploadController : ControllerBase
     {
@@ -22,35 +22,36 @@ namespace MediaApi.Controllers
         { 
             public IFormFile file { get; set; }
         }
-
-        public async Task<string> Post([FromForm]FileUploadAPI objFile) 
+        [HttpPost]
+        [Route("api/[controller]/filepath={filepath}&id={id}")]
+        public IActionResult AddImage(Guid id,String filepath, [FromForm]FileUploadAPI objFile) 
         {
             try
             {
                 if (objFile.file.Length > 0)
                 {
 
-                    if (!Directory.Exists(_environment.WebRootPath + "\\Upload\\"))
+                    if (!Directory.Exists(_environment.WebRootPath + filepath))
                     {
-                        Directory.CreateDirectory(_environment.WebRootPath + "\\Upload\\");
+                        Directory.CreateDirectory(_environment.WebRootPath + filepath);
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Upload\\" + objFile.file.FileName))
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + filepath + objFile.file.FileName))
                     {
                         objFile.file.CopyTo(fileStream);
                         fileStream.Flush();
 
-                        return "\\Upload\\" + objFile.file.FileName;
+                        return Ok(filepath + objFile.file.FileName);
                     }
 
                 }
                 else
                 {
-                    return "Failed";
+                    return BadRequest("No Image");
                 }
             }
             catch (Exception e) 
             { 
-                return e.Message.ToString();
+                return BadRequest(e.Message.ToString());
             }
         }
     }

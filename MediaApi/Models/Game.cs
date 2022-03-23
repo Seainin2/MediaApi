@@ -19,6 +19,8 @@ namespace MediaApi.Models
         [Required]
         public String Title { get; set; }
 
+        public String ImageName { get; set; }
+
         [Required]
         public String ReleaseDate { get; set; }
 

@@ -4,12 +4,12 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'sidenav',
+    redirectTo: 'login',
     pathMatch: 'full'
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
   },
   {
     path: 'signup',
@@ -17,8 +17,9 @@ const routes: Routes = [
   },
   {
     path: 'sidenav',
-    loadChildren: () => import('./pages/sidebar/sidenav/sidenav.module').then( m => m.SidenavPageModule)
+    loadChildren: () => import('./pages/sidenav/sidenav.module').then( m => m.SidenavPageModule)
   },
+
 ];
 
 @NgModule({

@@ -13,6 +13,9 @@ namespace MediaApi.Models
         public Guid SeriesId { get; set; }
         [Required]
         public String Name { get; set; }
+
+        public String ImageName { get; set; }
+
         [Required]
         public Boolean Finished { get; set; }
 
