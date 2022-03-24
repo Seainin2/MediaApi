@@ -20,14 +20,14 @@ export class MediaPage{
   constructor(public navCtrl: NavController, public httpClient: HttpClient,private plt: Platform, private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
-    this.results = this.httpClient.get('http://localhost:5000/api/movies');
+    this.results = this.httpClient.get('http://localhost:5000/api/Series');
     this.results
     .subscribe(data => {
       console.log('my data: ', data);
     })
   }
 
-  async searchDataFuckCors(){
+  /*async searchDataFuckCors(){
     let loading = await this.loadingCtrl.create();
     await loading.present();
 
@@ -49,5 +49,6 @@ export class MediaPage{
       console.log('my data: ', data);
     })
   }
+  */
 
 }

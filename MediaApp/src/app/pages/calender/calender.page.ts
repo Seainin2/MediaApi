@@ -5,11 +5,15 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './calender.page.html',
   styleUrls: ['./calender.page.scss'],
 })
-export class CalenderPage implements OnInit {
+export class CalenderPage{
+  date: string;
+  type: 'string';
+
 
   constructor() { }
 
-  ngOnInit() {
+  onChange($event){
+    console.log($event);
   }
 
 }

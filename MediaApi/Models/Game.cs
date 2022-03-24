@@ -17,6 +17,10 @@ namespace MediaApi.Models
         public Guid CreatingPropertyId { get; set; }
 
         [Required]
+
+        public String MediaType { get; set; }
+
+        [Required]
         public String Title { get; set; }
 
         public String ImageName { get; set; }

@@ -11,6 +11,11 @@ namespace MediaApi.Models
     {
         [Key]
         public Guid SeriesId { get; set; }
+
+        [Required]
+
+        public String MediaType { get; set; }
+
         [Required]
         public String Name { get; set; }
 

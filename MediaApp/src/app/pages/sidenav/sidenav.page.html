@@ -1,5 +1,5 @@
 <ion-app>
-  <ion-menu contentId="main-content" side="start">
+  <ion-menu contentId="main-content" side="start" type="push">
     <ion-header>
       <ion-toolbar>
         <ion-title>Side Bar Nav</ion-title>
@@ -7,14 +7,32 @@
     </ion-header>
 
     <ion-content>
-      <ion-list *ngFor="let nav of navigate; let i = index">
-        <ion-menu-toggle auto-hide="true" >
-
-          <ion-item [routerLink]="[nav.link]">
-            {{nav.name}}
-            <ion-icon slot="start" [ios]="nav.icon + '-outline'" [md]="nav.icon + '-sharp'"></ion-icon>
-          </ion-item>
-        </ion-menu-toggle>
+      <ion-list>
+        <ion-item>
+          <ion-button [routerLink]="['media']">
+            NewsFeed
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button [routerLink]="['Calender']">
+            Calendar
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button [routerLink]="['forums']">
+            Forum
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button [routerLink]="['messages']">
+            Chat
+          </ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button [routerLink]="['profile']">
+            Profile
+          </ion-button>
+        </ion-item>
       </ion-list>
     </ion-content>
   </ion-menu>
