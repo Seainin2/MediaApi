@@ -1,5 +1,6 @@
 ﻿using MediaApi.Data;
 using MediaApi.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -14,9 +15,10 @@ namespace MediaApi.Controllers
     {
 
         private ISeasonData _Data;
-
-        public SeasonsController(ISeasonData allData)
+        private static IWebHostEnvironment _environment;
+        public SeasonsController(ISeasonData allData,IWebHostEnvironment environment)
         {
+            _environment = environment;
             _Data = allData;
         }
 
@@ -56,16 +58,14 @@ namespace MediaApi.Controllers
 
                         Directory.CreateDirectory(_environment.WebRootPath + "\\Season\\");
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Season\\" + objFile.file.FileName))
-                    {
-                        objFile.file.CopyTo(fileStream);
-                        fileStream.Flush();
+                    using FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Season\\" + objFile.file.FileName);
+                    objFile.file.CopyTo(fileStream);
+                    fileStream.Flush();
 
 
-                        Season season = JsonConvert.DeserializeObject<Season>(data);
-                        season.ImageName = objFile.file.FileName;
-                        return Ok(_Data.AddSeason(season));
-                    }
+                    Season season = JsonConvert.DeserializeObject<Season>(data);
+                    season.ImageName = objFile.file.FileName;
+                    return Ok(_Data.AddSeason(season));
                 }
                 else
                 {
@@ -75,8 +75,8 @@ namespace MediaApi.Controllers
             }
             catch (Exception e)
             {
-                //return Ok(e.Message.ToString());
-                return Ok("What??");
+                return Ok(e.Message.ToString());
+                
             }
         }
 

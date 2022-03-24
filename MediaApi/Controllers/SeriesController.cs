@@ -14,7 +14,7 @@ namespace MediaApi.Data
     {
 
         private ISeriesData _Data;
-        public static IWebHostEnvironment _environment;
+        private static IWebHostEnvironment _environment;
 
         public SeriesController(ISeriesData allData, IWebHostEnvironment environment)
         {
@@ -58,17 +58,15 @@ namespace MediaApi.Data
 
                         Directory.CreateDirectory(_environment.WebRootPath + "\\Series\\");
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Series\\" + objFile.file.FileName))
-                    {
-                        objFile.file.CopyTo(fileStream);
-                        fileStream.Flush();
+                    using FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Series\\" + objFile.file.FileName);
+                    objFile.file.CopyTo(fileStream);
+                    fileStream.Flush();
 
 
-                        Series series = JsonConvert.DeserializeObject<Series>(data);
-                        series.ImageName = objFile.file.FileName;
-                        series.MediaType = "Series";
-                        return Ok(_Data.AddSeries(series));
-                    }
+                    Series series = JsonConvert.DeserializeObject<Series>(data);
+                    series.ImageName = objFile.file.FileName;
+                    series.MediaType = "Series";
+                    return Ok(_Data.AddSeries(series));
                 }
                 else
                 {

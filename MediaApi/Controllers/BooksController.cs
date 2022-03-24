@@ -1,5 +1,6 @@
 ﻿using MediaApi.Data;
 using MediaApi.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -14,9 +15,11 @@ namespace MediaApi.Controllers
     {
 
         private IBookData _bookData;
+        private static IWebHostEnvironment _environment;
 
-        public BooksController(IBookData allData)
+        public BooksController(IBookData allData, IWebHostEnvironment enviroment)
         {
+            _environment = enviroment;
             _bookData = allData;
         }
 

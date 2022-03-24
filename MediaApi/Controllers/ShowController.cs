@@ -13,7 +13,7 @@ namespace MediaApi.Controllers
     public class ShowController : Controller
     {
         private IShowData _showData;
-        public static IWebHostEnvironment _environment;
+        private static IWebHostEnvironment _environment;
 
         public ShowController(IShowData allData, IWebHostEnvironment environment)
         {
@@ -56,17 +56,15 @@ namespace MediaApi.Controllers
 
                         Directory.CreateDirectory(_environment.WebRootPath + "\\Show\\");
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Show\\" + objFile.file.FileName))
-                    {
-                        objFile.file.CopyTo(fileStream);
-                        fileStream.Flush();
+                    using FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Show\\" + objFile.file.FileName);
+                    objFile.file.CopyTo(fileStream);
+                    fileStream.Flush();
 
 
-                        Show show = JsonConvert.DeserializeObject<Show>(data);
-                        show.ImageName = objFile.file.FileName;
-                        show.MediaType = "Show";
-                        return Ok(_showData.AddShow(show));
-                    }
+                    Show show = JsonConvert.DeserializeObject<Show>(data);
+                    show.ImageName = objFile.file.FileName;
+                    show.MediaType = "Show";
+                    return Ok(_showData.AddShow(show));
                 }
                 else
                 {
@@ -76,8 +74,7 @@ namespace MediaApi.Controllers
             }
             catch (Exception e)
             {
-                //return Ok(e.Message.ToString());
-                return Ok("What??");
+                return Ok(e.Message.ToString());
             }
         }
 

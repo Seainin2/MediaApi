@@ -16,7 +16,7 @@ namespace MediaApi.Controllers
     {
 
         private IMovieData _movieData;
-        public static IWebHostEnvironment _environment;
+        private static IWebHostEnvironment _environment;
 
         public MoviesController(IMovieData allData, IWebHostEnvironment environment) 
         {
@@ -60,17 +60,15 @@ namespace MediaApi.Controllers
 
                         Directory.CreateDirectory(_environment.WebRootPath + "\\Movie\\");
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Movie\\" + objFile.file.FileName))
-                    {
-                        objFile.file.CopyTo(fileStream);
-                        fileStream.Flush();
+                    using FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Movie\\" + objFile.file.FileName);
+                    objFile.file.CopyTo(fileStream);
+                    fileStream.Flush();
 
 
-                        Movie movie = JsonConvert.DeserializeObject<Movie>(data);
-                        movie.ImageName = objFile.file.FileName;
-                        movie.MediaType = "Movie";
-                        return Ok(_movieData.AddMovie(movie));
-                    }
+                    Movie movie = JsonConvert.DeserializeObject<Movie>(data);
+                    movie.ImageName = objFile.file.FileName;
+                    movie.MediaType = "Movie";
+                    return Ok(_movieData.AddMovie(movie));
                 }
                 else
                 {
@@ -79,8 +77,8 @@ namespace MediaApi.Controllers
 
             } catch (Exception e)
             {
-                //return Ok(e.Message.ToString());
-                return Ok("What??");
+                return Ok(e.Message.ToString());
+                
             }
 
             

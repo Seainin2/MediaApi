@@ -1,5 +1,6 @@
 ﻿using MediaApi.Data;
 using MediaApi.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -14,9 +15,11 @@ namespace MediaApi.Controllers
     {
 
         private IGameData _Data;
+        private static IWebHostEnvironment _environment;
 
-        public GamesController(IGameData allData)
+        public GamesController(IGameData allData,IWebHostEnvironment environment)
         {
+            _environment = environment;
             _Data = allData;
         }
 
@@ -56,17 +59,15 @@ namespace MediaApi.Controllers
 
                         Directory.CreateDirectory(_environment.WebRootPath + "\\Game\\");
                     }
-                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Game\\" + objFile.file.FileName))
-                    {
-                        objFile.file.CopyTo(fileStream);
-                        fileStream.Flush();
+                    using FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Game\\" + objFile.file.FileName);
+                    objFile.file.CopyTo(fileStream);
+                    fileStream.Flush();
 
 
-                        Game game = JsonConvert.DeserializeObject<Game>(data);
-                        game.ImageName = objFile.file.FileName;
-                        game.MediaType = "Game";
-                        return Ok(_Data.AddGame(game));
-                    }
+                    Game game = JsonConvert.DeserializeObject<Game>(data);
+                    game.ImageName = objFile.file.FileName;
+                    game.MediaType = "Game";
+                    return Ok(_Data.AddGame(game));
                 }
                 else
                 {
@@ -76,8 +77,7 @@ namespace MediaApi.Controllers
             }
             catch (Exception e)
             {
-                //return Ok(e.Message.ToString());
-                return Ok("What??");
+                return Ok(e.Message.ToString());
             }
         }
 
