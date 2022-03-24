@@ -32,15 +32,21 @@ namespace MediaApi.Data
             Series series = _allContext.Series.Find(id);
             List<Object> list = new List<Object>();
 
-            List<Movie> movies = _allContext.Movies.Where(x => x.SeriesId == id).ToList();
-            List<Book> books = _allContext.Books.Where(x => x.SeriesId == id).ToList();
-            List<Game> games = _allContext.Games.Where(x => x.SeriesId == id).ToList();
-            List<Season> seasons = _allContext.Seasons.Where(x => x.SeriesId == id).ToList();
+            list.AddRange(_allContext.Movies.Where(x => x.SeriesId == id).ToList());
 
-            list.AddRange(movies);
-            list.AddRange(books);
-            list.AddRange(games);
-            list.AddRange(seasons);
+            list.AddRange(_allContext.Books.Where(x => x.SeriesId == id).ToList());
+
+            list.AddRange(_allContext.Games.Where(x => x.SeriesId == id).ToList());
+
+            List<Show> shows = _allContext.Shows.Where(x => x.SeriesId == id).ToList();
+            foreach (Show show in shows) {
+                show.Seasons.AddRange(_allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList());
+                foreach (Season season in show.Seasons) {
+                    season.Episodes.AddRange(_allContext.Episodes.Where(x => x.SeasonId == season.MediaId).ToList());
+                }
+            }
+
+            list.AddRange(shows);
 
             series.Media = list;
 

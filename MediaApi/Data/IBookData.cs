@@ -14,6 +14,6 @@ namespace MediaApi.Data
 
         List<Book> GetBooksBySeriesId(Guid id);
 
-        List<Book> getBooksByCreatingPropertyId(Guid id);
+        List<Book> GetBooksByCreatingPropertyId(Guid id);
     }
 }

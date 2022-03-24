@@ -2,7 +2,7 @@
 
 namespace MediaApi.Controllers
 {
-    [ApiController]
+    //[ApiController]
     public class FeedController : Controller
     {
         //private IFeedData _Data;

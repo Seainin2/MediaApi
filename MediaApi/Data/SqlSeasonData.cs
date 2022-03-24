@@ -35,15 +35,5 @@ namespace MediaApi.Data
         {
             return _allContext.Seasons.ToList();
         }
-
-        public List<Season> GetSeasonsByCreatingPropertyId(Guid id)
-        {
-            return _allContext.Seasons.Where(x => x.CreatingPropertyId == id).ToList();
-        }
-
-        public List<Season> GetSeasonsBySeriesId(Guid id)
-        {
-            return _allContext.Seasons.Where(x => x.SeriesId == id).ToList();
-        }
     }
 }

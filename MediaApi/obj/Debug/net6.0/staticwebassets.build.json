@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9x2SHyxetiFXqWN5fmyBFOkOJvjHGfU6Q4a/UWkTSbM=",
+  "Hash": "nEwMa0PI8Y5krexkPc7WbqAv+BZ2W2ItdFLfk8surdA=",
   "Source": "MediaApi",
   "BasePath": "_content/MediaApi",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "MediaApi\\wwwroot",
       "Source": "MediaApi",
-      "ContentRoot": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\wwwroot\\Movie\\words of radiance.jpg",
+      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Series\\words of radiance.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
-      "RelativePath": "Movie/words of radiance.jpg",
+      "RelativePath": "Series/words of radiance.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,24 +31,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Movie\\words of radiance.jpg"
-    },
-    {
-      "Identity": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\wwwroot\\Upload\\ManualSave_7f757_7e612400_69edc4.png",
-      "SourceId": "MediaApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\wwwroot\\",
-      "BasePath": "_content/MediaApi",
-      "RelativePath": "Upload/ManualSave_7f757_7e612400_69edc4.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Upload\\ManualSave_7f757_7e612400_69edc4.png"
+      "OriginalItemSpec": "wwwroot\\Series\\words of radiance.jpg"
     }
   ]
 }

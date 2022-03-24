@@ -271,11 +271,8 @@ namespace MediaApi.Migrations
 
             modelBuilder.Entity("MediaApi.Models.Season", b =>
                 {
-                    b.Property<Guid>("MediaId")
+                    b.Property<Guid>("SeasonId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatingPropertyId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Description")
@@ -284,9 +281,8 @@ namespace MediaApi.Migrations
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("MediaType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("MediaId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("NumberofTimesSearched")
                         .HasColumnType("int");
@@ -295,14 +291,11 @@ namespace MediaApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("SeriesId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("MediaId");
+                    b.HasKey("SeasonId");
 
                     b.ToTable("Seasons");
                 });
@@ -341,6 +334,9 @@ namespace MediaApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("Description")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("Finished")
                         .HasColumnType("bit");
 
@@ -355,9 +351,40 @@ namespace MediaApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("ReleaseDate")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("SeriesId");
 
                     b.ToTable("Series");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.Show", b =>
+                {
+                    b.Property<Guid>("MediaId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatingPropertyId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MediaType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("SeriesId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MediaId");
+
+                    b.ToTable("Shows");
                 });
 
             modelBuilder.Entity("MediaApi.Models.Theme", b =>

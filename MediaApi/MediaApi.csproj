@@ -30,6 +30,7 @@
     <Folder Include="wwwroot\Season\" />
     <Folder Include="wwwroot\ReccomendingResource\" />
     <Folder Include="wwwroot\Person\" />
+    <Folder Include="wwwroot\Upload\" />
   </ItemGroup>
 
 </Project>

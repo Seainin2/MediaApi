@@ -19,6 +19,10 @@ namespace MediaApi.Models
         [Required]
         public String Name { get; set; }
 
+        public String Description { get; set; }
+
+        public String ReleaseDate { get; set; }
+
         public String ImageName { get; set; }
 
         [Required]

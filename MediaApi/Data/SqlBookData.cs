@@ -30,7 +30,7 @@ namespace MediaApi.Data
             return _allContext.Books.ToList();
         }
 
-        public List<Book> getBooksByCreatingPropertyId(Guid id)
+        public List<Book> GetBooksByCreatingPropertyId(Guid id)
         {
             return _allContext.Books.Where(x => x.CreatingPropertyId ==id).ToList();
         }

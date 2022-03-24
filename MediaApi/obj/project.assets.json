@@ -7390,19 +7390,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\seain\\.nuget\\packages\\": {}
+    "C:\\Users\\Seainin Keenan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\MediaApi.csproj",
+      "projectUniqueName": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\MediaApi.csproj",
       "projectName": "MediaApi",
-      "projectPath": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\MediaApi.csproj",
-      "packagesPath": "C:\\Users\\seain\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\seain\\Documents\\4YearProject\\MediaApi\\obj\\",
+      "projectPath": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\MediaApi.csproj",
+      "packagesPath": "C:\\Users\\Seainin Keenan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\seain\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Seainin Keenan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7410,7 +7410,8 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {},
+        "https://nuget.telerik.com/nuget": {}
       },
       "frameworks": {
         "net6.0": {
@@ -7479,7 +7480,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-rc.2.21505.57\\RuntimeIdentifierGraph.json"
       }
     }
   },

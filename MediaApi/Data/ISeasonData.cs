@@ -13,9 +13,5 @@ namespace MediaApi.Data
 
         Season AddSeason(Season season);
 
-        List<Season> GetSeasonsBySeriesId(Guid id);
-
-        List<Season> GetSeasonsByCreatingPropertyId(Guid id);
-
     }
 }

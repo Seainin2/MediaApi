@@ -7,16 +7,12 @@ namespace MediaApi.Models
 {
     public class Season
     {
+   
         [Key]
-        public Guid MediaId { get; set; }
-
-        public Guid SeriesId { get; set; }
-
-        public Guid CreatingPropertyId { get; set; }
+        public Guid SeasonId { get; set; }
 
         [Required]
-
-        public String MediaType { get; set; }
+        public Guid MediaId { get; set; }
 
         [Required]
         public String Title { get; set; }

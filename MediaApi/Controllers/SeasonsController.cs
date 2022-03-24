@@ -2,7 +2,10 @@
 using MediaApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
+using System.IO;
+using static MediaApi.Controllers.ImageUploadController;
 
 namespace MediaApi.Controllers
 {
@@ -42,39 +45,39 @@ namespace MediaApi.Controllers
         [HttpPost]
         [Route("api/[controller]")]
 
-        public IActionResult AddSeason(Season season)
+        public IActionResult AddSeason([FromForm] String data, [FromForm] FileUploadAPI objFile)
         {
-
-            return Ok(_Data.AddSeason(season));
-
-        }
-
-        [HttpGet]
-        [Route("api/[controller]/CreatingProperty/{id}")]
-
-        public IActionResult GetSeasonsByCreatingPropertyId(Guid id)
-        {
-            var media = _Data.GetSeasonsByCreatingPropertyId(id);
-            if (media != null)
+            try
             {
-                return Ok(media);
+                if (objFile.file.Length > 0 && !objFile.Equals(null))
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\Season\\"))
+                    {
+
+                        Directory.CreateDirectory(_environment.WebRootPath + "\\Season\\");
+                    }
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Season\\" + objFile.file.FileName))
+                    {
+                        objFile.file.CopyTo(fileStream);
+                        fileStream.Flush();
+
+
+                        Season season = JsonConvert.DeserializeObject<Season>(data);
+                        season.ImageName = objFile.file.FileName;
+                        return Ok(_Data.AddSeason(season));
+                    }
+                }
+                else
+                {
+                    return Ok("Show was NOT!! added, no image");
+                }
+
             }
-
-            return NotFound($"Season with Id: {id} was not found");
-        }
-
-        [HttpGet]
-        [Route("api/[controller]/Series/{id}")]
-
-        public IActionResult GetSeasonsBySeriesId(Guid id)
-        {
-            var media = _Data.GetSeasonsBySeriesId(id);
-            if (media != null)
+            catch (Exception e)
             {
-                return Ok(media);
+                //return Ok(e.Message.ToString());
+                return Ok("What??");
             }
-
-            return NotFound($"Season with Id: {id} was not found");
         }
 
     }

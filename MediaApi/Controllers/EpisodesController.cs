@@ -44,7 +44,7 @@ namespace MediaApi.Controllers
 
         public IActionResult AddEpisode(Episode episode)
         {
-
+          
             return Ok(_Data.AddEpisode(episode));
 
         }

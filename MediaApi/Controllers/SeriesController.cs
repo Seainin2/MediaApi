@@ -1,7 +1,11 @@
 ﻿using MediaApi.Models;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
+using System.IO;
+using static MediaApi.Controllers.ImageUploadController;
 
 namespace MediaApi.Data
 {
@@ -10,9 +14,11 @@ namespace MediaApi.Data
     {
 
         private ISeriesData _Data;
+        public static IWebHostEnvironment _environment;
 
-        public SeriesController(ISeriesData allData)
+        public SeriesController(ISeriesData allData, IWebHostEnvironment environment)
         {
+            _environment = environment;
             _Data = allData;
         }
 
@@ -41,13 +47,40 @@ namespace MediaApi.Data
         [HttpPost]
         [Route("api/[controller]")]
 
-        public IActionResult AddSeries(Series series)
+        public IActionResult AddSeries([FromForm] String data, [FromForm] FileUploadAPI objFile)
         {
+            try
+            {
+                if (objFile.file.Length > 0 && !objFile.Equals(null))
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\Series\\"))
+                    {
 
-            return Ok(_Data.AddSeries(series));
+                        Directory.CreateDirectory(_environment.WebRootPath + "\\Series\\");
+                    }
+                    using (FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Series\\" + objFile.file.FileName))
+                    {
+                        objFile.file.CopyTo(fileStream);
+                        fileStream.Flush();
 
+
+                        Series series = JsonConvert.DeserializeObject<Series>(data);
+                        series.ImageName = objFile.file.FileName;
+                        series.MediaType = "Series";
+                        return Ok(_Data.AddSeries(series));
+                    }
+                }
+                else
+                {
+                    return Ok("Show was NOT!! added, no image");
+                }
+
+            }
+            catch (Exception e)
+            {
+                return Ok(e.Message.ToString());
+            }
         }
-
 
     }
 }

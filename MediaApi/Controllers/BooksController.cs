@@ -2,7 +2,10 @@
 using MediaApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System;
+using System.IO;
+using static MediaApi.Controllers.ImageUploadController;
 
 namespace MediaApi.Controllers
 {
@@ -42,11 +45,37 @@ namespace MediaApi.Controllers
         [HttpPost]
         [Route("api/[controller]")]
 
-        public IActionResult AddBook(Book media)
+        public IActionResult AddBook([FromForm] String data, [FromForm] FileUploadAPI objFile)
         {
+            try
+            {
+                if (objFile.file.Length > 0 && !objFile.Equals(null))
+                {
+                    if (!Directory.Exists(_environment.WebRootPath + "\\Book\\"))
+                    {
 
-            return Ok(_bookData.AddBook(media));
+                        Directory.CreateDirectory(_environment.WebRootPath + "\\Book\\");
+                    }
+                    using FileStream fileStream = System.IO.File.Create(_environment.WebRootPath + "\\Book\\" + objFile.file.FileName);
+                    objFile.file.CopyTo(fileStream);
+                    fileStream.Flush();
 
+
+                    Book book = JsonConvert.DeserializeObject<Book>(data);
+                    book.ImageName = objFile.file.FileName;
+                    book.MediaType = "Book";
+                    return Ok(_bookData.AddBook(book));
+                }
+                else
+                {
+                    return Ok("Show was NOT!! added, no image");
+                }
+
+            }
+            catch (Exception e)
+            {
+                return Ok(e.Message.ToString());
+            }
         }
 
         [HttpGet]
@@ -54,7 +83,7 @@ namespace MediaApi.Controllers
 
         public IActionResult GetBooksByCreatingPropertyId(Guid id)
         {
-            var media = _bookData.getBooksByCreatingPropertyId(id);
+            var media = _bookData.GetBooksByCreatingPropertyId(id);
             if (media != null)
             {
                 return Ok(media);

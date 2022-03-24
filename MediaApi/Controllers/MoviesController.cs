@@ -68,6 +68,7 @@ namespace MediaApi.Controllers
 
                         Movie movie = JsonConvert.DeserializeObject<Movie>(data);
                         movie.ImageName = objFile.file.FileName;
+                        movie.MediaType = "Movie";
                         return Ok(_movieData.AddMovie(movie));
                     }
                 }
