@@ -39,11 +39,17 @@ namespace MediaApi.Data
             list.AddRange(_allContext.Games.Where(x => x.SeriesId == id).ToList());
 
             List<Show> shows = _allContext.Shows.Where(x => x.SeriesId == id).ToList();
-            foreach (Show show in shows) {
-                show.Seasons.AddRange(_allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList());
-                foreach (Season season in show.Seasons) {
-                    season.Episodes.AddRange(_allContext.Episodes.Where(x => x.SeasonId == season.MediaId).ToList());
+            foreach(Show show in shows) {
+                
+                
+                show.Seasons = _allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList();
+
+                foreach (Season season in show.Seasons)
+                {
+                    season.Episodes = _allContext.Episodes.Where(x => x.SeasonId == season.SeasonId).ToList();
                 }
+                
+                
             }
 
             list.AddRange(shows);

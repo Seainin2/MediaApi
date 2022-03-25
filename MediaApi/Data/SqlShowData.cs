@@ -39,7 +39,15 @@ namespace MediaApi.Data
 
         public List<Show> GetShows()
         {
-            throw new NotImplementedException();
+            List<Show> shows = _allContext.Shows.ToList();
+            foreach (Show show in shows)
+            {
+                show.Seasons = _allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList();
+
+            }
+
+
+            return shows;
         }
 
         public List<Show> GetShowsByCreatingPropertyId(Guid id)

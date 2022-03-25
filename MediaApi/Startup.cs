@@ -41,6 +41,7 @@ namespace MediaApi
             services.AddScoped<ISeasonData, SqlSeasonData>();
             services.AddScoped<ISeriesData, SqlSeriesData>();
             services.AddScoped<IShowData, SqlShowData>();
+            services.AddScoped<IFeedData, SqlFeedData>();
 
             services.AddCors(option => {
                 option.AddDefaultPolicy(builder =>
