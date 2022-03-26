@@ -20,11 +20,26 @@
 
 <ion-content>
   <ion-list>
-    <ion-item button *ngFor="let item of (results | async)" [routerLink]="['/','movies',item.mediaId]">
-      <ion-label text-wrap>
-        <img src="http://localhost:5000/Movie/{{item.imageName}}">
-        <h3>{{item.title}}</h3>
-      </ion-label>
-    </ion-item>
+    <ion-card button *ngFor="let item of (results | async)" [routerLink]="['/','movies',item.mediaId]">
+        <div *ngIf="item.mediaType=='Movie'" class="container">
+          <div class="Image">
+            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+          </div>
+          
+          <div class="Title">
+            <h3>{{item.title}}</h3>
+          </div>
+          <div class="Description">
+            {{item.description}}
+          </div>
+        </div>
+        <div *ngIf="item.mediaType=='Show'" class="container">
+          <div class="Image">
+            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+          </div>
+          
+          <div class="Title"><h3>{{item.title}}</h3></div>
+        </div>
+    </ion-card>
   </ion-list>
 </ion-content>

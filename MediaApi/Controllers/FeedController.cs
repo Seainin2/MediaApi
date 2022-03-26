@@ -18,10 +18,18 @@ namespace MediaApi.Controllers
         [HttpGet]
         [Route("api/[controller]/{search}")]
 
-        public IActionResult GetFeed([FromForm] String data, String search)
+        public IActionResult GetFeed([FromForm] String data, String search = "")
         {
             List<String> mediaTypes = JsonConvert.DeserializeObject<List<String>>(data);
-            return Ok(_Data.GetAllMedia(mediaTypes,search));
+            return Ok(_Data.GetMedia(mediaTypes,search));
+        }
+
+        [HttpGet]
+        [Route("api/[controller]")]
+
+        public IActionResult GetAllFeed() 
+        {
+            return Ok(_Data.GetAllMedia());
         }
     
     }

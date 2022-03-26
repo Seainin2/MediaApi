@@ -12,7 +12,26 @@ namespace MediaApi.Data
         {
             _allContext = allContext;
         }
-        public List<object> GetAllMedia(List<string> mediaTypes,string title = "")
+
+        public List<object> GetAllMedia()
+        {
+            List<object> list = new List<object>();
+
+            list.AddRange(_allContext.Movies.ToList());
+            list.AddRange(_allContext.Books.ToList());
+            list.AddRange(_allContext.Games.ToList());
+            List<Show> shows = _allContext.Shows.ToList();
+            foreach (Show show in shows)
+            {
+                show.Seasons = _allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList();
+            }
+
+            list.AddRange(shows);
+
+            return list;
+        
+        }
+        public List<object> GetMedia(List<string> mediaTypes,string title = "")
         {
 
             List<object> list = new List<object>();

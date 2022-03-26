@@ -6,7 +6,9 @@ namespace MediaApi.Data
     public interface IFeedData
     {
 
-        List<object> GetAllMedia(List<String> mediaTypes, String search = "");
+        List<object> GetMedia(List<String> mediaTypes, String search = "");
+
+        List<object> GetAllMedia();
 
     }
 }

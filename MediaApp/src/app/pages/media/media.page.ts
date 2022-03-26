@@ -20,7 +20,7 @@ export class MediaPage{
   constructor(public navCtrl: NavController, public httpClient: HttpClient,private plt: Platform, private loadingCtrl: LoadingController) { }
 
   ngOnInit() {
-    this.results = this.httpClient.get('http://localhost:5000/api/Series');
+    this.results = this.httpClient.get('http://localhost:5000/api/Feed');
     this.results
     .subscribe(data => {
       console.log('my data: ', data);
