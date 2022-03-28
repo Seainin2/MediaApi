@@ -19,6 +19,14 @@ const routes: Routes = [
     path: 'sidenav',
     loadChildren: () => import('./pages/sidenav/sidenav.module').then( m => m.SidenavPageModule)
   },
+  {
+    path: 'movie',
+    loadChildren: () => import('./pages/details/movie/movie.module').then( m => m.MoviePageModule)
+  },
+  {
+    path: 'games',
+    loadChildren: () => import('./pages/details/games/games.module').then( m => m.GamesPageModule)
+  },
 
 ];
 

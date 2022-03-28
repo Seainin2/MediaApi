@@ -20,12 +20,36 @@
 
 <ion-content>
   <ion-list>
-    <ion-card button *ngFor="let item of (results | async)" [routerLink]="['/','movies',item.mediaId]">
+    <ion-card button *ngFor="let item of (results | async); let i = index" (click)="openMovieWithState(item)">
         <div *ngIf="item.mediaType=='Movie'" class="container">
           <div class="Image">
             <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
           </div>
-          
+
+          <div class="Title">
+            <h3>{{item.title}}</h3>
+          </div>
+          <div class="Description">
+            {{item.description}}
+          </div>
+        </div>
+        <div *ngIf="item.mediaType=='Game'" class="container">
+          <div class="Image">
+            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+          </div>
+
+          <div class="Title">
+            <h3>{{item.title}}</h3>
+          </div>
+          <div class="Description">
+            {{item.description}}
+          </div>
+        </div>
+        <div *ngIf="item.mediaType=='Book'" class="container">
+          <div class="Image">
+            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+          </div>
+
           <div class="Title">
             <h3>{{item.title}}</h3>
           </div>
@@ -37,8 +61,21 @@
           <div class="Image">
             <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
           </div>
-          
+
           <div class="Title"><h3>{{item.title}}</h3></div>
+          <ion-list>
+            <ion-card class="container" *ngFor="let season of item.seasons">
+              <div class="Image">
+                <ion-img src="http://localhost:5000/Season/{{season.imageName}}"></ion-img>
+              </div>
+              <div class="Title">
+                <h3>{{season.title}}</h3>
+              </div>
+              <div class="Description">
+                {{season.description}}
+              </div>
+            </ion-card>
+          </ion-list>
         </div>
     </ion-card>
   </ion-list>

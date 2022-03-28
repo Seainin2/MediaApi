@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Movies } from '../../interfaces/all';
 import { NavigationExtras, Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { LoadingController, NavController, Platform } from '@ionic/angular';
+import { AlertController, LoadingController, NavController, Platform } from '@ionic/angular';
 import { HttpClient } from '@angular/common/http';
 import { finalize } from 'rxjs/operators';
 
@@ -17,7 +17,7 @@ export class MediaPage{
   data = [];
   results: Observable<any>;
 
-  constructor(public navCtrl: NavController, public httpClient: HttpClient,private plt: Platform, private loadingCtrl: LoadingController) { }
+  constructor(public navCtrl: NavController, public httpClient: HttpClient,private route: Router,private alertController: AlertController) { }
 
   ngOnInit() {
     this.results = this.httpClient.get('http://localhost:5000/api/Feed');
@@ -26,6 +26,16 @@ export class MediaPage{
       console.log('my data: ', data);
     })
   }
+
+  openMovieWithState(media: any){
+    let navigationExtras: NavigationExtras = {
+      state: {
+        movie: media
+      }
+    };
+    this.route.navigate(['movie'], navigationExtras);
+  }
+
 
   /*async searchDataFuckCors(){
     let loading = await this.loadingCtrl.create();

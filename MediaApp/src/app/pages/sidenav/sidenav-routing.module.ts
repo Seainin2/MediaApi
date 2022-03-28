@@ -13,6 +13,10 @@ const routes: Routes = [
         loadChildren: () => import('../media/media.module').then(m => m.MediaPageModule)
       },
       {
+        path: 'movie',
+        loadChildren: () => import('../details/movie/movie.module').then(m => m.MoviePageModule)
+      },
+      {
         path: 'calender',
         loadChildren: () => import('../calender/calender.module').then(m => m.CalenderPageModule)
       },

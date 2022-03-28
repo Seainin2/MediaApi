@@ -1,19 +1,19 @@
 
 .container {
     max-width: 100%;
-    display: grid; 
-    grid-auto-flow: row dense; 
-    grid-template-columns: 0.5fr 1.5fr; 
-    grid-template-rows: 0.5fr 0.5fr; 
-    gap: 0px 0px; 
-    grid-template-areas: 
+    display: grid;
+    grid-auto-flow: row dense;
+    grid-template-columns: 0.7fr 1.3fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    gap: 0px 0px;
+    grid-template-areas:
       "Image Title"
-      "Image Description"; 
+      "Image Description";
     }
-  .Image { 
+  .Image {
       grid-area: Image;
     }
-  .Title { 
+  .Title {
       grid-area: Title;
       margin: fill;
       text-align: center;
@@ -25,3 +25,4 @@
       height: 1fr;
       margin-bottom: 0.1em;
   }
+
