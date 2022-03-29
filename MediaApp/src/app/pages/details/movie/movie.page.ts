@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-movie',
@@ -9,11 +11,15 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class MoviePage implements OnInit {
 
   data: any;
+  apidata: any;
+  results: Observable<any>;
 
-  constructor(private route: ActivatedRoute, private router: Router) {
+  url = "http://localhost:5000/api/Series/";
+
+  constructor(private route: ActivatedRoute, private router: Router, private httpClient: HttpClient) {
     this.route.queryParams.subscribe(params => {
       if(this.router.getCurrentNavigation().extras.state){
-        this.data = this.router.getCurrentNavigation().extras.state.movie
+        this.data = this.router.getCurrentNavigation().extras.state.media
       }
     }
 
@@ -21,6 +27,12 @@ export class MoviePage implements OnInit {
   }
 
   ngOnInit() {
+    this.results = this.httpClient.get(`${this.url}${this.data.seriesId}`);
+    this.results
+    .subscribe(apidata => {
+      this.apidata = apidata;
+      console.log('my data: ', apidata);
+    })
   }
 
 }

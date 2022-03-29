@@ -1,24 +1,108 @@
-
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
     </ion-buttons>
-    <ion-title>Details</ion-title>
+    <ion-title>{{data.mediaType}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
-<ion-card *ngIf="data">
-  <ion-card-header>
-    <ion-card-title>
-      {{data.title}}
-    </ion-card-title>
-    <ion-card-subtitle>
-    </ion-card-subtitle>
-  </ion-card-header>
-  <ion-card-content>
+  <!--Details from media clicked on-->
 
-  </ion-card-content>
-</ion-card>
+
+  <!--List of medias in the same seris of media-->
+  <h3>List Of other medias in this series</h3>
+  <div *ngIf="apidata">
+    <ion-img src="http://localhost:5000/{{apidata.mediaType}}/{{apidata.imageName}}"></ion-img>
+
+
+    <div class="series">
+      {{apidata.name}}
+    </div>
+
+    <div>
+      {{apidata.mediaType}} {{apidata.releaseDate}}
+    </div>
+
+
+    <div>
+      {{apidata.description}}
+
+      {{apidata.finished}}
+
+      <div class="container" *ngFor="let item of apidata.media">
+        <div *ngIf="item.title != data.title; else showDetailsAtTheTop">
+          <div class="secondary">
+          <div class="Image">
+            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+          </div>
+
+          <div class="Title season">
+            <h3>{{item.title}}</h3>
+          </div>
+
+          <div class="Description">
+            {{item.description}}
+          </div>
+        </div>
+        </div>
+        <!--Details to be shown at the top of the page-->
+        <ng-template #showDetailsAtTheTop>
+          <div class="main">
+            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+
+            <div class="movie">
+              {{item.title}}
+            </div>
+
+            <div>
+              {{item.mediaType}} {{item.releaseDate}}
+            </div>
+
+
+            <div>
+              {{item.description}}
+              <br>
+              <div *ngIf="item.mediaType=='Movie'">{{item.length}} min</div>
+              <div *ngIf="item.mediaType=='Book'">{{item.length}} pages</div>
+
+              <!--Next part for seasons data-->
+              <div *ngFor="let season of item.seasons">
+
+                <ion-img src="http://localhost:5000/Season/{{season.imageName}}"></ion-img>
+                <div class="season">
+                  {{season.title}}
+                </div>
+
+                <div>
+                  {{season.releaseDate}}
+                </div>
+
+                <div>
+                  {{season.description}}
+                  <br>
+                  above here
+                  <div *ngFor="let episode of season.episodes">
+                    here
+                    {{episode.title}}
+                    <br>
+                    {{episode.description}}
+                    <br>
+                    {{episode.length}} min
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </ng-template>
+
+      </div>
+
+    </div>
+  </div>
+
 </ion-content>

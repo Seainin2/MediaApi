@@ -1,82 +1,96 @@
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-title>Newsfeed</ion-title>
-    <ion-buttons slot="start">
-      <ion-menu-button autoHide="false"></ion-menu-button>
-    </ion-buttons>
-    <ion-searchbar showCancelButton="focus" placeholder="FilterSearch" animated></ion-searchbar>
-    <ion-item>
-      <ion-label>Media Type</ion-label>
-      <ion-select multiple="true" cancelText="Nah" okText="Okay!">
-        <ion-select-option value="Game">Game</ion-select-option>
-        <ion-select-option value="Book">Book</ion-select-option>
-        <ion-select-option value="Movie">Movie</ion-select-option>
-        <ion-select-option value="Show">Show</ion-select-option>
-        <ion-select-option value="Series">Series</ion-select-option>
-      </ion-select>
-    </ion-item>
+    <div>
+      <ion-title>Newsfeed</ion-title>
+    </div>
+    <div>
+      <ion-buttons slot="start">
+        <ion-menu-button autoHide="false"></ion-menu-button>
+      </ion-buttons>
+    </div>
+    <div>
+      <ion-searchbar showCancelButton="focus" placeholder="FilterSearch" animated></ion-searchbar>
+      <ion-item>
+        <ion-label>Media Type</ion-label>
+        <ion-select multiple="true" cancelText="Nah" okText="Okay!">
+          <ion-select-option value="Game">Game</ion-select-option>
+          <ion-select-option value="Book">Book</ion-select-option>
+          <ion-select-option value="Movie">Movie</ion-select-option>
+          <ion-select-option value="Show">Show</ion-select-option>
+          <ion-select-option value="Series">Series</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
-    <ion-card button *ngFor="let item of (results | async); let i = index" (click)="openMovieWithState(item)">
-        <div *ngIf="item.mediaType=='Movie'" class="container">
-          <div class="Image">
-            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-          </div>
-
-          <div class="Title">
-            <h3>{{item.title}}</h3>
-          </div>
-          <div class="Description">
-            {{item.description}}
-          </div>
+    <ion-card button *ngFor="let item of (results | async); let i = index" (click)="moreDetails(item)">
+      <div *ngIf="item.mediaType=='Movie'" class="container">
+        <div class="Image">
+          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
         </div>
-        <div *ngIf="item.mediaType=='Game'" class="container">
-          <div class="Image">
-            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-          </div>
 
-          <div class="Title">
-            <h3>{{item.title}}</h3>
-          </div>
-          <div class="Description">
-            {{item.description}}
-          </div>
+        <div class="Title movie">
+          <h3>{{item.title}}</h3>
+          <h5>{{item.mediaType}} {{item.releaseDate}}</h5>
         </div>
-        <div *ngIf="item.mediaType=='Book'" class="container">
-          <div class="Image">
-            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-          </div>
+        <div class="Description">
+          {{item.description}}
+        </div>
+      </div>
 
-          <div class="Title">
-            <h3>{{item.title}}</h3>
-          </div>
-          <div class="Description">
-            {{item.description}}
-          </div>
+      <div *ngIf="item.mediaType=='Game'" class="container">
+        <div class="Image">
+          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
         </div>
-        <div *ngIf="item.mediaType=='Show'" class="container">
-          <div class="Image">
-            <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-          </div>
 
-          <div class="Title"><h3>{{item.title}}</h3></div>
-          <ion-list>
-            <ion-card class="container" *ngFor="let season of item.seasons">
-              <div class="Image">
-                <ion-img src="http://localhost:5000/Season/{{season.imageName}}"></ion-img>
-              </div>
-              <div class="Title">
-                <h3>{{season.title}}</h3>
-              </div>
-              <div class="Description">
-                {{season.description}}
-              </div>
-            </ion-card>
-          </ion-list>
+        <div class="Title game">
+          <h3>{{item.title}}</h3>
+          <h5>{{item.mediaType}} {{item.releaseDate}}</h5>
         </div>
+        <div class="Description">
+          {{item.description}}
+        </div>
+      </div>
+      <div *ngIf="item.mediaType=='Book'" class="container">
+        <div class="Image">
+          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+        </div>
+
+        <div class="Title book">
+          <h3>{{item.title}}</h3>
+          <h5>{{item.mediaType}} {{item.releaseDate}}</h5>
+        </div>
+        <div class="Description">
+          {{item.description}}
+        </div>
+      </div>
+      <div *ngIf="item.mediaType=='Show'" class="container">
+        <div class="Image">
+          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
+        </div>
+
+        <div class="Title show">
+          <h3>{{item.title}}</h3>
+          <h5>{{item.mediaType}}</h5>
+        </div>
+        <ion-list>
+          <ion-card class="container" *ngFor="let season of item.seasons">
+            <div class="Image">
+              <ion-img src="http://localhost:5000/Season/{{season.imageName}}"></ion-img>
+            </div>
+            <div class="Title season">
+              <h3>{{season.title}}</h3>
+              <h5>{{season.releaseDate}}</h5>
+            </div>
+            <div class="Description">
+              {{season.description}}
+            </div>
+          </ion-card>
+        </ion-list>
+      </div>
     </ion-card>
   </ion-list>
 </ion-content>

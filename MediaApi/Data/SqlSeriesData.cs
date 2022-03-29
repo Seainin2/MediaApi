@@ -29,34 +29,49 @@ namespace MediaApi.Data
 
         public Series getSeries(Guid id)
         {
+
             Series series = _allContext.Series.Find(id);
-            List<Object> list = new List<Object>();
+            if (series == null) {
+                return null;
+            }
+            List<Object> list = new List<object>();
 
-            list.AddRange(_allContext.Movies.Where(x => x.SeriesId == id).ToList());
+            List<Movie> movies = _allContext.Movies.Where(x => x.SeriesId == id).ToList();
+            if (movies.Any()) { list.AddRange(movies); }
 
-            list.AddRange(_allContext.Books.Where(x => x.SeriesId == id).ToList());
+            List<Book> books = _allContext.Books.Where(x => x.SeriesId == id).ToList();
+            if (books.Any()) { list.AddRange(books); }
 
-            list.AddRange(_allContext.Games.Where(x => x.SeriesId == id).ToList());
+            List<Game> games = _allContext.Games.Where(x => x.SeriesId == id).ToList();
+            if (games.Any()) { list.AddRange(games); }
 
             List<Show> shows = _allContext.Shows.Where(x => x.SeriesId == id).ToList();
-            foreach(Show show in shows) {
-                
-                
-                show.Seasons = _allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList();
+            if (shows.Any())
+            {
 
-                foreach (Season season in show.Seasons)
+
+                foreach (Show show in shows)
                 {
-                    season.Episodes = _allContext.Episodes.Where(x => x.SeasonId == season.SeasonId).ToList();
-                }
-                
-                
-            }
 
-            list.AddRange(shows);
+
+                    show.Seasons = _allContext.Seasons.Where(x => x.MediaId == show.MediaId).ToList();
+
+                    foreach (Season season in show.Seasons)
+                    {
+                        season.Episodes = _allContext.Episodes.Where(x => x.SeasonId == season.SeasonId).ToList();
+                    }
+
+
+                }
+
+                list.AddRange(shows);
+            }
 
             series.Media = list;
 
             return series;
+
+
         }
     }
 }

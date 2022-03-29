@@ -27,10 +27,10 @@ export class MediaPage{
     })
   }
 
-  openMovieWithState(media: any){
+  moreDetails(media: any){
     let navigationExtras: NavigationExtras = {
       state: {
-        movie: media
+        media: media
       }
     };
     this.route.navigate(['movie'], navigationExtras);
