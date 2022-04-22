@@ -81,33 +81,6 @@ namespace MediaApi.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("api/[controller]/CreatingProperty/{id}")]
-
-        public IActionResult GetBooksByCreatingPropertyId(Guid id)
-        {
-            var media = _bookData.GetBooksByCreatingPropertyId(id);
-            if (media != null)
-            {
-                return Ok(media);
-            }
-
-            return NotFound($"Book with Id: {id} was not found");
-        }
-
-        [HttpGet]
-        [Route("api/[controller]/Series/{id}")]
-
-        public IActionResult GetBooksBySeriesId(Guid id)
-        {
-            var media = _bookData.GetBooksBySeriesId(id);
-            if (media != null)
-            {
-                return Ok(media);
-            }
-
-            return NotFound($"Book with Id: {id} was not found");
-        }
 
     }
 }

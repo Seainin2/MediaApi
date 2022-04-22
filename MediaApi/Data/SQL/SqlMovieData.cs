@@ -21,6 +21,11 @@ namespace MediaApi.Data
             return movie;
         }
 
+        public bool DeleteMovie(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Movie GetMovie(Guid id)
         {
             return _allContext.Movies.Find(id);
@@ -31,14 +36,9 @@ namespace MediaApi.Data
             return _allContext.Movies.ToList();
         }
 
-        public List<Movie> getMoviesByCreatingPropertyId(Guid id)
+        public Movie UpdateMovie(Movie movie)
         {
-            return _allContext.Movies.Where(x => x.CreatingPropertyId == id).ToList();
-        }
-
-        public List<Movie> GetMoviesBySeriesId(Guid id)
-        {
-            return _allContext.Movies.Where(x => x.SeriesId == id).ToList();
+            throw new NotImplementedException();
         }
     }
 }

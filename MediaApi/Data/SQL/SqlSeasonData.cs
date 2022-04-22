@@ -20,6 +20,11 @@ namespace MediaApi.Data
             return season;
         }
 
+        public bool DeleteSeason(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Season GetSeason(Guid id)
         {
             Season season = _allContext.Seasons.Find(id);
@@ -34,6 +39,11 @@ namespace MediaApi.Data
         public List<Season> GetSeasons()
         {
             return _allContext.Seasons.ToList();
+        }
+
+        public Season UpdateSeason(Season season)
+        {
+            throw new NotImplementedException();
         }
     }
 }

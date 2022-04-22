@@ -13,5 +13,9 @@ namespace MediaApi.Data
 
         Series AddSeries(Series series);
 
+        Series UpdateSeries(Series series);
+
+        Boolean DeleteSeries(Guid id);
+
     }
 }

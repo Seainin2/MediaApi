@@ -21,6 +21,11 @@ namespace MediaApi.Data
             return game;
         }
 
+        public bool DeleteGame(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Game GetGame(Guid id)
         {
             return _allContext.Games.Find(id);
@@ -31,14 +36,9 @@ namespace MediaApi.Data
             return _allContext.Games.ToList();
         }
 
-        public List<Game> getGamesByCreatingPropertyId(Guid id)
+        public Game UpdateGame(Game game)
         {
-            return _allContext.Games.Where(x => x.CreatingPropertyId == id).ToList();
-        }
-
-        public List<Game> GetGamesBySeriesId(Guid id)
-        {
-            return _allContext.Games.Where(x => x.SeriesId == id).ToList();
+            throw new NotImplementedException();
         }
     }
 }

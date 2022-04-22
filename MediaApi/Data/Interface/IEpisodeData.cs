@@ -15,5 +15,9 @@ namespace MediaApi.Data
 
         List<Episode> GetEpisodesBySeasonId(Guid id);
 
+        Episode UpdateEpisode(Episode episode);
+
+        Boolean DeleteEpisode(Guid id);
+
     }
 }

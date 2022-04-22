@@ -78,32 +78,6 @@ namespace MediaApi.Controllers
             }
         }
 
-        [HttpGet]
-        [Route("api/[controller]/CreatingProperty/{id}")]
 
-        public IActionResult GetShowByCreatingPropertyId(Guid id)
-        {
-            var show = _showData.GetShowsByCreatingPropertyId(id);
-            if (show != null)
-            {
-                return Ok(show);
-            }
-
-            return NotFound($"Show with Id: {id} was not found");
-        }
-
-        [HttpGet]
-        [Route("api/[controller]/Series/{id}")]
-
-        public IActionResult GetMoviesBySeriesId(Guid id)
-        {
-            var show = _showData.GetShowsBySeriesId(id);
-            if (show != null)
-            {
-                return Ok(show);
-            }
-
-            return NotFound($"Show with Id: {id} was not found");
-        }
     }
 }

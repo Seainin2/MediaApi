@@ -22,6 +22,11 @@ namespace MediaApi.Data
             return series;
         }
 
+        public bool DeleteSeries(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Series> GetSeries()
         {
             return _allContext.Series.ToList();
@@ -72,6 +77,11 @@ namespace MediaApi.Data
             return series;
 
 
+        }
+
+        public Series UpdateSeries(Series series)
+        {
+            throw new NotImplementedException();
         }
     }
 }

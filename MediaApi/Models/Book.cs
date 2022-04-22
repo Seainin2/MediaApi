@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace MediaApi.Models
-{
+{//in dbset
     public class Book
     {
         [Key]
@@ -24,14 +25,32 @@ namespace MediaApi.Models
 
         public String ImageName { get; set; }
 
-        [Required]
-        public String ReleaseDate { get; set; }
-
         public String Description { get; set; }
 
         public int NumberofTimesSearched { get; set; }
 
         public int Length { get; set; }
+
+        [Required]
+        [Column(TypeName = "Date")]
+        public DateTime ReleaseDate { get; set; }
+
+        [NotMapped]
+        public List<Theme> Themes { get; set; }
+
+        [NotMapped]
+        public List<Genre> Genres { get; set; }
+
+        [NotMapped]
+        public List<Person> People { get; set; }
+
+        [NotMapped]
+        public List<ReccomendingResource> OfficialReviews { get; set; }
+
+        [NotMapped]
+
+        public List<UserReview> Reviews { get; set; }
+
 
 
     }

@@ -1,19 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MediaApi.Models
-{
+{//in dbset
     public class Person
     {
         [Key]
         public Guid PersonId { get; set; }
-
-        public string Name { get; set; }
+        [Required]
+        public String Name { get; set; }
 
         public String ImageName { get; set; }
 
-        public String DOB { get; set; }
+        [Column(TypeName = "Date")]
+        public DateTime DOB { get; set; }
+
+        [NotMapped]
+        public String Position { get; set; }
 
     }
 }

@@ -13,9 +13,9 @@ namespace MediaApi.Data
 
         Movie AddMovie(Movie movie);
 
-        List<Movie> GetMoviesBySeriesId(Guid id);
+        Movie UpdateMovie(Movie movie);
 
-        List<Movie> getMoviesByCreatingPropertyId(Guid id);
+        Boolean DeleteMovie(Guid id);
 
     }
 }

@@ -21,6 +21,11 @@ namespace MediaApi.Data
             return episode;
         }
 
+        public bool DeleteEpisode(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Episode GetEpisode(Guid id)
         {
             return _allContext.Episodes.Find(id);
@@ -34,6 +39,11 @@ namespace MediaApi.Data
         public List<Episode> GetEpisodesBySeasonId(Guid id)
         {
             return _allContext.Episodes.Where(x => x.SeasonId == id).ToList();
+        }
+
+        public Episode UpdateEpisode(Episode episode)
+        {
+            throw new NotImplementedException();
         }
     }
 }

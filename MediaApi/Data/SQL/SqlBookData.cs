@@ -20,6 +20,11 @@ namespace MediaApi.Data
             return book;
         }
 
+        public bool DeleteBook(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Book GetBook(Guid id)
         {
             return _allContext.Books.Find(id);
@@ -30,14 +35,9 @@ namespace MediaApi.Data
             return _allContext.Books.ToList();
         }
 
-        public List<Book> GetBooksByCreatingPropertyId(Guid id)
+        public Book UpdateBook(Book book)
         {
-            return _allContext.Books.Where(x => x.CreatingPropertyId ==id).ToList();
-        }
-
-        public List<Book> GetBooksBySeriesId(Guid id)
-        {
-            return _allContext.Books.Where(x => x.SeriesId == id).ToList();
+            throw new NotImplementedException();
         }
     }
 }

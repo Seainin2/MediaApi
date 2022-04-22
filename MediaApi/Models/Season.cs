@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MediaApi.Models
-{
+{//in dbset
     public class Season
     {
    
@@ -19,9 +19,6 @@ namespace MediaApi.Models
 
         public String ImageName { get; set; }
 
-        [Required]
-        public String ReleaseDate { get; set; }
-
         public String Description { get; set; }
 
         public int NumberofTimesSearched { get; set; }
@@ -30,8 +27,28 @@ namespace MediaApi.Models
 
         public List<Episode> Episodes { get; set; }
 
-    }
+        [Required]
+        [Column(TypeName = "Date")]
+        public DateTime ReleaseDate { get; set; }
 
+        [NotMapped]
+        public List<Theme> Themes { get; set; }
+
+        [NotMapped]
+        public List<Genre> Genres { get; set; }
+
+        [NotMapped]
+        public List<Person> People { get; set; }
+
+        [NotMapped]
+        public List<ReccomendingResource> OfficialReviews { get; set; }
+
+        [NotMapped]
+
+        public List<UserReview> Reviews { get; set; }
+
+    }
+    //in dbset
     public class Episode
     {
 
@@ -41,7 +58,7 @@ namespace MediaApi.Models
         [Required]
 
         public Guid SeasonId { get; set; }
-
+        [Required]
         public String Title { get; set; }
 
         public String Description { get; set; }
