@@ -47,9 +47,8 @@ namespace MediaApi.Migrations
                     b.Property<int>("NumberofTimesSearched")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReleaseDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("Date");
 
                     b.Property<Guid>("SeriesId")
                         .HasColumnType("uniqueidentifier");
@@ -100,6 +99,7 @@ namespace MediaApi.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Title")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("EpisodeId");
@@ -129,9 +129,8 @@ namespace MediaApi.Migrations
                     b.Property<int>("NumberofTimesSearched")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReleaseDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("Date");
 
                     b.Property<Guid>("SeriesId")
                         .HasColumnType("uniqueidentifier");
@@ -145,9 +144,43 @@ namespace MediaApi.Migrations
                     b.ToTable("Games");
                 });
 
-            modelBuilder.Entity("MediaApi.Models.Genre", b =>
+            modelBuilder.Entity("MediaApi.Models.GameMuliplayerOption", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MediaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MultiplayerOptionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GameMuliplayerOptions");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.GamePlatform", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MediaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("PlatformId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("GamePlatform");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.Genre", b =>
+                {
+                    b.Property<Guid>("GenreId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
@@ -155,12 +188,26 @@ namespace MediaApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.HasKey("GenreId");
+
+                    b.ToTable("Genres");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.MediaGenre", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("GenreId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<Guid>("MediaId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Genres");
+                    b.ToTable("MeediaGenre");
                 });
 
             modelBuilder.Entity("MediaApi.Models.MediaPerson", b =>
@@ -181,6 +228,23 @@ namespace MediaApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("MediaPersons");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.MediaTheme", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MediaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("ThemeId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("MediaThemes");
                 });
 
             modelBuilder.Entity("MediaApi.Models.Movie", b =>
@@ -208,9 +272,8 @@ namespace MediaApi.Migrations
                     b.Property<int>("NumberofTimesSearched")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReleaseDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("Date");
 
                     b.Property<Guid>("SeriesId")
                         .HasColumnType("uniqueidentifier");
@@ -224,24 +287,55 @@ namespace MediaApi.Migrations
                     b.ToTable("Movies");
                 });
 
+            modelBuilder.Entity("MediaApi.Models.MultiplayerOption", b =>
+                {
+                    b.Property<Guid>("MultiplayerOptionId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("MultiplayerOptionType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("MultiplayerOptionId");
+
+                    b.ToTable("MultiplayerOptions");
+                });
+
             modelBuilder.Entity("MediaApi.Models.Person", b =>
                 {
                     b.Property<Guid>("PersonId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("DOB")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("DOB")
+                        .HasColumnType("Date");
 
                     b.Property<string>("ImageName")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("PersonId");
 
                     b.ToTable("Persons");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.Platform", b =>
+                {
+                    b.Property<Guid>("PlatformId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("PlatformName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("PlatformId");
+
+                    b.ToTable("Platform");
                 });
 
             modelBuilder.Entity("MediaApi.Models.ReccomendingResource", b =>
@@ -287,9 +381,8 @@ namespace MediaApi.Migrations
                     b.Property<int>("NumberofTimesSearched")
                         .HasColumnType("int");
 
-                    b.Property<string>("ReleaseDate")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("Date");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -307,6 +400,9 @@ namespace MediaApi.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ImageName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("MediaId")
@@ -351,8 +447,8 @@ namespace MediaApi.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ReleaseDate")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<DateTime>("ReleaseDate")
+                        .HasColumnType("Date");
 
                     b.HasKey("SeriesId");
 
@@ -393,9 +489,6 @@ namespace MediaApi.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<Guid>("MediaId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<string>("ThemeName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -403,6 +496,33 @@ namespace MediaApi.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Themes");
+                });
+
+            modelBuilder.Entity("MediaApi.Models.UserReview", b =>
+                {
+                    b.Property<Guid>("ReviewId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("DateCreated")
+                        .HasColumnType("Date");
+
+                    b.Property<Guid>("MediaId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Rating")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UsefulReview")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ReviewId");
+
+                    b.ToTable("UserReviews");
                 });
 #pragma warning restore 612, 618
         }

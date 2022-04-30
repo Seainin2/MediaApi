@@ -12,9 +12,9 @@ namespace MediaApi.Data
 
         Game AddGame(Game game);
 
-        List<Game> GetGamesBySeriesId(Guid id);
+        Game UpdateGame(Game game);
 
-        List<Game> getGamesByCreatingPropertyId(Guid id);
+        Boolean DeleteGame(Guid id);
 
     }
 }

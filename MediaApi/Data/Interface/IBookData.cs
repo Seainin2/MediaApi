@@ -12,8 +12,9 @@ namespace MediaApi.Data
 
         Book AddBook(Book book);
 
-        List<Book> GetBooksBySeriesId(Guid id);
+        Book UpdateBook(Book book);
 
-        List<Book> GetBooksByCreatingPropertyId(Guid id);
+        Boolean DeleteBook(Guid id);
+
     }
 }

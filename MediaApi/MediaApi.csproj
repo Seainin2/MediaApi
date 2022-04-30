@@ -22,6 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="ExtraFiles\" />
     <Folder Include="wwwroot\Book\" />
     <Folder Include="wwwroot\CreatingProperty\" />
     <Folder Include="wwwroot\Game\" />

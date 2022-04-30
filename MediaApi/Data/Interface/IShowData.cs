@@ -12,8 +12,8 @@ namespace MediaApi.Data
 
         Show AddShow(Show show);
 
-        List<Show> GetShowsBySeriesId(Guid id);
+        Show UpdateShow(Show show);
 
-        List<Show> GetShowsByCreatingPropertyId(Guid id);
+        Boolean DeleteShow(Guid id);
     }
 }

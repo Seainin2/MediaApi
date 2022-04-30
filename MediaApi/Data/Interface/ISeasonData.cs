@@ -13,5 +13,9 @@ namespace MediaApi.Data
 
         Season AddSeason(Season season);
 
+        Season UpdateSeason(Season season);
+
+        Boolean DeleteSeason(Guid id);
+
     }
 }

@@ -20,6 +20,11 @@ namespace MediaApi.Data
             return show;
         }
 
+        public bool DeleteShow(Guid id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Show GetShow(Guid id)
         {
             Show show = _allContext.Shows.Find(id);
@@ -50,12 +55,7 @@ namespace MediaApi.Data
             return shows;
         }
 
-        public List<Show> GetShowsByCreatingPropertyId(Guid id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public List<Show> GetShowsBySeriesId(Guid id)
+        public Show UpdateShow(Show show)
         {
             throw new NotImplementedException();
         }

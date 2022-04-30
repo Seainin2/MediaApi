@@ -86,32 +86,5 @@ namespace MediaApi.Controllers
         }
 
 
-        [HttpGet]
-        [Route("api/[controller]/CreatingProperty/{id}")]
-
-        public IActionResult GetMoviesByCreatingPropertyId(Guid id) {
-            var movie = _movieData.getMoviesByCreatingPropertyId(id);
-            if (movie != null)
-            {
-                return Ok(movie);
-            }
-
-            return NotFound($"Movie with Id: {id} was not found");
-        }
-
-        [HttpGet]
-        [Route("api/[controller]/Series/{id}")]
-
-        public IActionResult GetMoviesBySeriesId(Guid id)
-        {
-            var movie = _movieData.GetMoviesBySeriesId(id);
-            if (movie != null)
-            {
-                return Ok(movie);
-            }
-
-            return NotFound($"Movie with Id: {id} was not found");
-        }
-
     }
 }

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace MediaApi.Models
 {//Collections of media i.e. Trilogies, games series, shows with multipy seasons
+    //in dbset
     public class Series
     {
         [Key]
@@ -21,7 +22,9 @@ namespace MediaApi.Models
 
         public String Description { get; set; }
 
-        public String ReleaseDate { get; set; }
+        [Required]
+        [Column(TypeName = "Date")]
+        public DateTime ReleaseDate { get; set; }
 
         public String ImageName { get; set; }
 
