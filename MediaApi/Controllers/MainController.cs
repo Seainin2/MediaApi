@@ -18,7 +18,7 @@ namespace MediaApi.Controllers
             _environment = enviroment;
             _data = allData;
         }
-
+        /*
         [HttpGet]
         [Route("api/[controller]/{{value}}")]
 
@@ -29,7 +29,6 @@ namespace MediaApi.Controllers
                 case "Movie":
                     return Ok();
             }
-            return Ok();
-        }
+        }*/
     }
 }

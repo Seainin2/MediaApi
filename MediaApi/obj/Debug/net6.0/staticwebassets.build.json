@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "XmyOh5X/jK7i19xgZ09YS98/L5Y+GEJHDka1tfs1kCw=",
+  "Hash": "s/+dMOnZ5lDUtzHZEhLBFEy1MtLzt1BytzZEXVn/Yqw=",
   "Source": "MediaApi",
   "BasePath": "_content/MediaApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "MediaApi\\wwwroot",
       "Source": "MediaApi",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Book\\Oathbringer.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Book\\Oathbringer.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Book/Oathbringer.jpg",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Book\\Oathbringer.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Book\\RhythmOfWar.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Book\\RhythmOfWar.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Book/RhythmOfWar.jpg",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Book\\RhythmOfWar.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Book\\StromlightArchives5.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Book\\StromlightArchives5.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Book/StromlightArchives5.jpg",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Book\\StromlightArchives5.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Book\\TheWayOfKings.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Book\\TheWayOfKings.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Book/TheWayOfKings.jpg",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\Book\\TheWayOfKings.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Book\\WordsOfRadiance.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Book\\WordsOfRadiance.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Book/WordsOfRadiance.jpg",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\Book\\WordsOfRadiance.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\Bioshock.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\Bioshock.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/Bioshock.jpg",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\Bioshock.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\Bioshock2.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\Bioshock2.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/Bioshock2.jpg",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\Bioshock2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\BioshockInfinite.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\BioshockInfinite.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/BioshockInfinite.jpg",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\BioshockInfinite.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\BreathOfTheWild2.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\BreathOfTheWild2.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/BreathOfTheWild2.jpg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\BreathOfTheWild2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\Darkvoid.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\Darkvoid.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/Darkvoid.jpg",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\Darkvoid.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\RiseOfTheTombRaider.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\RiseOfTheTombRaider.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/RiseOfTheTombRaider.jpg",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\RiseOfTheTombRaider.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\ShadowOfTheTombRaider.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\ShadowOfTheTombRaider.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/ShadowOfTheTombRaider.jpg",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\ShadowOfTheTombRaider.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Game\\TombRaider.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Game\\TombRaider.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Game/TombRaider.jpg",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\Game\\TombRaider.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\Bioshock.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\Bioshock.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/Bioshock.jpg",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\Bioshock.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\Inception.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\Inception.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/Inception.jpg",
       "AssetKind": "All",
@@ -272,10 +272,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\Inception.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\MissionImpossible1.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\MissionImpossible1.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/MissionImpossible1.jpg",
       "AssetKind": "All",
@@ -289,10 +289,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\MissionImpossible1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\MissionImpossible2.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\MissionImpossible2.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/MissionImpossible2.jpg",
       "AssetKind": "All",
@@ -306,10 +306,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\MissionImpossible2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\MissionImpossible3.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\MissionImpossible3.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/MissionImpossible3.jpg",
       "AssetKind": "All",
@@ -323,10 +323,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\MissionImpossible3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\ScottPilgramVsTheWorld.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\ScottPilgramVsTheWorld.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/ScottPilgramVsTheWorld.jpg",
       "AssetKind": "All",
@@ -340,10 +340,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\ScottPilgramVsTheWorld.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\TheTombRaider.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Movie\\TheTombRaider.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Movie/TheTombRaider.jpg",
       "AssetKind": "All",
@@ -357,10 +357,10 @@
       "OriginalItemSpec": "wwwroot\\Movie\\TheTombRaider.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StangerThingsSeason3.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StangerThingsSeason3.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Season/StangerThingsSeason3.jpg",
       "AssetKind": "All",
@@ -374,10 +374,10 @@
       "OriginalItemSpec": "wwwroot\\Season\\StangerThingsSeason3.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StrangerThingsSeason1.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StrangerThingsSeason1.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Season/StrangerThingsSeason1.jpg",
       "AssetKind": "All",
@@ -391,10 +391,10 @@
       "OriginalItemSpec": "wwwroot\\Season\\StrangerThingsSeason1.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StrangerThingsSeason2.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StrangerThingsSeason2.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Season/StrangerThingsSeason2.jpg",
       "AssetKind": "All",
@@ -408,10 +408,10 @@
       "OriginalItemSpec": "wwwroot\\Season\\StrangerThingsSeason2.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StrangerThingsSeason4.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Season\\StrangerThingsSeason4.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Season/StrangerThingsSeason4.jpg",
       "AssetKind": "All",
@@ -425,10 +425,10 @@
       "OriginalItemSpec": "wwwroot\\Season\\StrangerThingsSeason4.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Series\\9ba2g8mttnk61.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Series\\9ba2g8mttnk61.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Series/9ba2g8mttnk61.jpg",
       "AssetKind": "All",
@@ -442,10 +442,10 @@
       "OriginalItemSpec": "wwwroot\\Series\\9ba2g8mttnk61.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Series\\astronaut-invisible-entity.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Series\\astronaut-invisible-entity.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Series/astronaut-invisible-entity.jpg",
       "AssetKind": "All",
@@ -459,10 +459,10 @@
       "OriginalItemSpec": "wwwroot\\Series\\astronaut-invisible-entity.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Series\\city-ghost.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Series\\city-ghost.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Series/city-ghost.jpg",
       "AssetKind": "All",
@@ -476,10 +476,10 @@
       "OriginalItemSpec": "wwwroot\\Series\\city-ghost.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Series\\dario-jelusic-even-challenge-final.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Series\\dario-jelusic-even-challenge-final.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Series/dario-jelusic-even-challenge-final.jpg",
       "AssetKind": "All",
@@ -493,10 +493,10 @@
       "OriginalItemSpec": "wwwroot\\Series\\dario-jelusic-even-challenge-final.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Series\\words of radiance.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Series\\words of radiance.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Series/words of radiance.jpg",
       "AssetKind": "All",
@@ -510,10 +510,10 @@
       "OriginalItemSpec": "wwwroot\\Series\\words of radiance.jpg"
     },
     {
-      "Identity": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\Show\\StrangerThings.jpg",
+      "Identity": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\Show\\StrangerThings.jpg",
       "SourceId": "MediaApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Seainin Keenan\\Documents\\College\\Year4Project\\MediaProject\\MediaApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\seain\\Documents\\Project\\MediaProject\\MediaApi\\wwwroot\\",
       "BasePath": "_content/MediaApi",
       "RelativePath": "Show/StrangerThings.jpg",
       "AssetKind": "All",

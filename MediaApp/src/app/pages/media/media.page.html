@@ -27,70 +27,14 @@
 <ion-content>
   <ion-list>
     <ion-card button *ngFor="let item of (results | async); let i = index" (click)="moreDetails(item)">
-      <div *ngIf="item.mediaType=='Movie'" class="container">
-        <div class="Image">
-          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-        </div>
-
-        <div class="Title movie">
-          <h3>{{item.title}}</h3>
-          <h5>{{item.mediaType}} {{item.releaseDate}}</h5>
-        </div>
-        <div class="Description">
+          {{item.title}}
+          <br>
+          {{item.releaseDate}}
+          <br>
+          {{item.mediaType}}
+          <br>
           {{item.description}}
-        </div>
-      </div>
-
-      <div *ngIf="item.mediaType=='Game'" class="container">
-        <div class="Image">
-          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-        </div>
-
-        <div class="Title game">
-          <h3>{{item.title}}</h3>
-          <h5>{{item.mediaType}} {{item.releaseDate}}</h5>
-        </div>
-        <div class="Description">
-          {{item.description}}
-        </div>
-      </div>
-      <div *ngIf="item.mediaType=='Book'" class="container">
-        <div class="Image">
-          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-        </div>
-
-        <div class="Title book">
-          <h3>{{item.title}}</h3>
-          <h5>{{item.mediaType}} {{item.releaseDate}}</h5>
-        </div>
-        <div class="Description">
-          {{item.description}}
-        </div>
-      </div>
-      <div *ngIf="item.mediaType=='Show'" class="container">
-        <div class="Image">
-          <ion-img src="http://localhost:5000/{{item.mediaType}}/{{item.imageName}}"></ion-img>
-        </div>
-
-        <div class="Title show">
-          <h3>{{item.title}}</h3>
-          <h5>{{item.mediaType}}</h5>
-        </div>
-        <ion-list>
-          <ion-card class="container" *ngFor="let season of item.seasons">
-            <div class="Image">
-              <ion-img src="http://localhost:5000/Season/{{season.imageName}}"></ion-img>
-            </div>
-            <div class="Title season">
-              <h3>{{season.title}}</h3>
-              <h5>{{season.releaseDate}}</h5>
-            </div>
-            <div class="Description">
-              {{season.description}}
-            </div>
-          </ion-card>
-        </ion-list>
-      </div>
+          <ion-img src="{{item.imageName}}"></ion-img>
     </ion-card>
   </ion-list>
 </ion-content>
